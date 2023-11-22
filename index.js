@@ -110,9 +110,7 @@ function distributeGifts(packOfGifts, reindeers) {
 	})
 	pesoQuePuedeLevantarElReno = arrayCantidadPesoReno.length;
 	pesoTotalDeLaCajaDeRegalos = arrayCantidadPesoRegalos.length;
-	console.log(pesoTotalDeLaCajaDeRegalos, pesoQuePuedeLevantarElReno)
 	cajasQuePuedeLlevarSantaClaus = parseInt(pesoQuePuedeLevantarElReno / pesoTotalDeLaCajaDeRegalos);
-	console.log("cajas: " + cajasQuePuedeLlevarSantaClaus)
 	return cajasQuePuedeLlevarSantaClaus;
 }
 const packOfGifts = ["book", "doll", "ball"]
