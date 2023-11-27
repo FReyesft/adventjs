@@ -179,4 +179,4 @@ const boxes = [
   { l: 2, w: 2, h: 2 }
 ]
 
-console.log(fitsInOneBox(boxes));
+//console.log(fitsInOneBox(boxes)); //<-- DESCOMENTA PARA EJECUTAR
