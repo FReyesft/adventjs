@@ -1,3 +1,5 @@
+//!Reto 1
+
 /*Este año los elfos han comprado una 
 máquina que envuelve regalos. Pero… ¡no 
 viene programada! Necesitamos crear un 
@@ -9,6 +11,7 @@ El papel de regalo es el símbolo * y
 para envolver un regalo se coloca el símbolo 
 * de forma que rodee totalmente al string por 
 todos los lados. Por ejemplo:*/
+
 
 const gifts = ['cat', 'game', 'socks'];
 function wrapping(gifts) {
@@ -29,6 +32,7 @@ function wrapping(gifts) {
 const wrapped = wrapping(gifts);  //<--DESCOMENTA PARA EJECUTAR
 //console.log(wrapped);
 
+//!Reto 2
 
 /*Un millonario ha comprado una red social y no trae buenas noticias. Ha anunciado que cada vez que una jornada de trabajo se pierde por un día festivo, habrá que compensarlo con dos horas extra otro día de ese mismo año.
 Obviamente la gente que trabaja en la empresa no le ha hecho ni pizca de gracia y están preparando un programa que les diga el número de horas extras que harían en el año si se aplicara la nueva norma.
@@ -68,6 +72,7 @@ const year = 2022
 const holidays = ['01/06', '04/01', '12/25', '10/12', '11/10']
 //console.log(countHours(year, holidays));   //<--DESCOMENTA PARA EJECUTAR
 
+//!Reto 3
 
 /*Tienes una caja de regalos de Navidad que Santa Claus quiere entregar a los niños. Cada regalo está representado por una cadena. 
 Santa Claus tiene un trineo que puede llevar un peso limitado, y cada regalo dentro de la caja tiene un peso que es igual al número de letras en el nombre del regalo.
@@ -117,6 +122,8 @@ const packOfGifts = ["book", "doll", "ball"]
 const reindeers = ["dasher", "dancer"]
 
 //console.log(distributeGifts(packOfGifts, reindeers)); // <-- DESCOMENTA PARA EJECUTAR
+
+//!Reto 4
 
 /*Santa Claus necesita hacer una revisión de sus cajas de regalos para asegurarse de que puede empaquetarlas todas en su trineo. 
 Cuenta con una serie de cajas de diferentes tamaños, que se caracterizan por su longitud, anchura y altura.
@@ -180,3 +187,41 @@ const boxes = [
 ]
 
 //console.log(fitsInOneBox(boxes)); //<-- DESCOMENTA PARA EJECUTAR
+
+
+//!Reto 5
+
+/*En la fábrica de juguetes del Polo Norte, cada juguete tiene un número de identificación único.
+Sin embargo, debido a un error en la máquina de juguetes, algunos números se han asignado a más de un juguete.
+¡Encuentra el primer número de identificación que se ha repetido, donde la segunda ocurrencia tenga el índice más pequeño!
+En otras palabras, si hay más de un número repetido, debes devolver el número cuya segunda ocurrencia aparezca primero en la 
+lista. Si no hay números repetidos, devuelve -1.
+const giftIds = [2, 1, 3, 5, 3, 2]
+const firstRepeatedId = findFirstRepeated(giftIds)
+console.log(firstRepeatedId) // 3
+// Aunque el 2 y el 3 se repiten
+// el 3 aparece primero por segunda vez
+
+const giftIds2 = [1, 2, 3, 4]
+const firstRepeatedId2 = findFirstRepeated(giftIds2)
+console.log(firstRepeatedId2) // -1
+// Es -1 ya que no se repite ningún número
+
+const giftIds3 = [5, 1, 5, 1]
+const firstRepeatedId3 = findFirstRepeated(giftIds3)
+console.log(firstRepeatedId3) // 5
+¡Ojo! Los elfos dicen que esto es una prueba técnica de Google.*/
+
+function findFirstRepeated(gifts) {
+  let firstId = gifts[0]
+  for (let index = 0; index < gifts.length; index++) {
+    let element = gifts[index]
+    if(firstId === element) {
+      return firstId
+    } else return -1
+  } 
+}
+
+const giftIds = [2, 1, 3, 5, 3, 2]
+const firstRepeatedId = findFirstRepeated(giftIds)
+console.log(firstRepeatedId)
