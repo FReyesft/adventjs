@@ -137,16 +137,34 @@ const firstRepeatedId = findFirstRepeated(giftIds)
 console.log(firstRepeatedId)*/
 
 
-//Codeforces 
-//? Reto Watermelon
+/*Codeforces Reto Watermelon*/
 
 const watermelonWeight = 90;
-
 function canBeEven() {        
   if(watermelonWeight % 2 !== 0) {
     return "NO";
   } else return "YES";
 }
-
 //console.log(canBeEven()); 
+//*TODO: Descomenta para ejecutar ⬆️
+
+/*Codeforces Reto Way Too Long Words*/
+
+const word = "internationalization"
+
+function longWord() {
+  if(word.length > 10) {
+    let wordArr = word.split('');
+    let firstLetter = wordArr[0]
+    let lastPosition = wordArr.length - 1
+    let lastLetter = wordArr[lastPosition]
+    let splicedWord = wordArr.slice(1, lastPosition).length
+    let wordMinified = `${firstLetter}${splicedWord}${lastLetter}`
+    return wordMinified
+  } else {
+    return word
+  }
+}
+
+//console.log(longWord())
 //*TODO: Descomenta para ejecutar ⬆️
