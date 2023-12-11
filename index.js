@@ -317,17 +317,19 @@ const string2 = "aaaA";
 function orderSum(string) {
   let arrString = string.split('+');
   let arrSorted = arrString.sort();
-  let arrWithSimbol = []
+  let arrWithoutSimbol = []
   let lastIndex = arrSorted.length
   for (let i = 0; i < arrSorted.length; i++) {
     if(lastIndex != arrSorted[i]) {
-      arrWithSimbol.push(arrSorted[i] + '+')
+      arrWithoutSimbol.push(arrSorted[i] + '+')
     }
   }
-  let finalArr = arrWithSimbol.toString().replaceAll(',', '')
-  return finalArr + lastIndex
+  arrWithoutSimbol = arrWithoutSimbol.join('').slice(0, -1);
+  let finalArr = arrWithoutSimbol.replace(',', '');
+  return finalArr;
 }
 
 let string = "1+1+1+3+3";
-//console.log(orderSum(string));
+console.log(orderSum(string));
+
 //*TODO: Descomenta para ejecutar ⬆️
