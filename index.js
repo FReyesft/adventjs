@@ -124,7 +124,7 @@ const firstRepeatedId = findFirstRepeated(giftIds)
 console.log(firstRepeatedId)*/
 
 
-/*Codeforces Reto Watermelon*/
+/*Codeforces Reto Watermelon 01*/
 
 const watermelonWeight = 90;
 function canBeEven() {        
@@ -135,7 +135,7 @@ function canBeEven() {
 //console.log(canBeEven()); 
 //*TODO: Descomenta para ejecutar ⬆️
 
-/*Codeforces Reto Way Too Long Words*/
+/*Codeforces Reto Way Too Long Words 02*/
 
 const word = "internationalization"
 
@@ -156,9 +156,9 @@ function longWord() {
 //console.log(longWord())
 //*TODO: Descomenta para ejecutar ⬆️
 
-/*Codeforces Reto Team*/
+/*Codeforces Reto Team 03*/
 
-function solveContest(n, problems) {
+function areSureOfProblem(n, problems) {
   let output = 0;
 
   for (let i = 0; i < n; i++) {
@@ -177,7 +177,8 @@ const problems1 = [
   [1, 0, 0],
 ];
 
-console.log(solveContest(n1, problems1)); 
+//console.log(areSureOfProblem(n1, problems1)); 
+//*TODO: Descomenta para ejecutar ⬆️
 
 const n2 = 2;
 const problems2 = [
@@ -185,5 +186,28 @@ const problems2 = [
   [0, 1, 1],
 ];
 
-//console.log(solveContest(n2, problems2)); 
+//console.log(areSureOfProblem(n2, problems2)); 
+//*TODO: Descomenta para ejecutar ⬆️
+
+/*Codeforces Reto Next Round 04*/
+
+
+function nextRound(players, minPoints) {
+  let arrOfPlayer = []
+  minPoints = minPoints + 1;
+  let count = 0;
+  for (let i = 1; i < players + 1; i++) {
+    let pointsOfPlayer = Math.floor(Math.random() * 10) 
+    arrOfPlayer.push(pointsOfPlayer)
+  }
+  console.log(arrOfPlayer)
+  arrOfPlayer.forEach((player) => {
+    if(player >= minPoints) {
+      count++
+    }
+  })
+  console.log(count)
+}
+
+//nextRound(8, 5)
 //*TODO: Descomenta para ejecutar ⬆️
