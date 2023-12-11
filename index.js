@@ -197,7 +197,7 @@ function nextRound(players, minPoints) {
   minPoints = minPoints + 1;
   let count = 0;
   for (let i = 1; i < players + 1; i++) {
-    let pointsOfPlayer = Math.floor(Math.random() * 10) 
+    let pointsOfPlayer = Math.floor(Math.random() * 10)
     arrOfPlayer.push(pointsOfPlayer)
   }
   console.log(arrOfPlayer)
@@ -211,3 +211,36 @@ function nextRound(players, minPoints) {
 
 //nextRound(8, 5)
 //*TODO: Descomenta para ejecutar ⬆️
+
+
+/*Codeforces Reto Bit++ 05*/
+
+
+function solveOperation(number, typeOperation) {
+  if(typeOperation === '--') {
+    number -= 1;
+    return number;
+  } else if (typeOperation === '++') {
+    number += 1;
+    return number
+  }
+}
+
+/*
+let inputNumber = parseInt(prompt("Escriba el número"));
+let typeOperation = prompt("escriba el tipo de operación el número es: " + inputNumber);
+console.log(solveOperation(inputNumber, typeOperation))
+*/
+//*TODO: Descomenta para ejecutar ⬆️
+
+
+/*Codeforces Reto Dominio piling*/
+
+
+function fitsIn(side1, side2) {
+  const sizeDomino = 2;
+  const sizeTable = side1 * side2;
+  console.log(sizeTable)
+}
+
+fitsIn(2, 4);
