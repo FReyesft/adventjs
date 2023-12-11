@@ -240,7 +240,8 @@ console.log(solveOperation(inputNumber, typeOperation))
 function fitsIn(side1, side2) {
   const sizeDomino = 2;
   const sizeTable = side1 * side2;
-  console.log(sizeTable)
+  let countOfDominos = Math.floor(sizeTable / sizeDomino);
+  return countOfDominos;
 }
 
-fitsIn(2, 4);
+console.log(fitsIn(3, 2));
