@@ -2,21 +2,21 @@
 
 const gifts = ['cat', 'game', 'socks'];
 function wrapping(gifts) {
-	let giftsEnvolved = [];
-	gifts.forEach(gift => {
-		let quantityOfCharacters = gift.length + 2;
-		let quanityOfPaper = []
-		for (let i = 0; i < quantityOfCharacters; i++) {
-			quanityOfPaper[i] = "*"
-		}
-		let paper = quanityOfPaper.toString().replaceAll(',', '');
-		const giftEnvolved = `${paper}\n*${gift}*\n${paper}`;
-		giftsEnvolved.push(giftEnvolved)
-	});
-	return giftsEnvolved;
+  let giftsEnvolved = [];
+  gifts.forEach(gift => {
+    let quantityOfCharacters = gift.length + 2;
+    let quanityOfPaper = []
+    for (let i = 0; i < quantityOfCharacters; i++) {
+      quanityOfPaper[i] = "*"
+    }
+    let paper = quanityOfPaper.toString().replaceAll(',', '');
+    const giftEnvolved = `${paper}\n*${gift}*\n${paper}`;
+    giftsEnvolved.push(giftEnvolved)
+  });
+  return giftsEnvolved;
 }
 
-const wrapped = wrapping(gifts); 
+const wrapped = wrapping(gifts);
 //console.log(wrapped);
 //*TODO: Descomenta para ejecutar ⬆️
 
@@ -26,9 +26,9 @@ const wrapped = wrapping(gifts);
 function countHours(year, holidays) {
   const startDate = new Date(year, 0, 1);
   const endDate = new Date(year, 11, 31);
-  
+
   let extraHours = 0;
-  
+
   for (let currentDate = startDate; currentDate <= endDate; currentDate.setDate(currentDate.getDate() + 1)) {
     const dayOfWeek = currentDate.getDay();
     if (dayOfWeek >= 1 && dayOfWeek <= 5) {
@@ -38,7 +38,7 @@ function countHours(year, holidays) {
       }
     }
   }
-  
+
   return extraHours;
 }
 
@@ -50,27 +50,27 @@ const holidays = ['01/06', '04/01', '12/25', '10/12', '11/10']
 //!Reto 3
 
 function distributeGifts(packOfGifts, reindeers) {
-	let pesoQuePuedeLevantarElReno;
-	let pesoTotalDeLaCajaDeRegalos;
-	let cajasQuePuedeLlevarSantaClaus;
-	let arrayCantidadPesoRegalos = [];
-	let arrayCantidadPesoReno = [];
-	reindeers.forEach((reno)=>{
-		pesoQuePuedeLevantarElReno = reno.length * 2;
-		for (let pesoReno = 1; pesoReno <= pesoQuePuedeLevantarElReno; pesoReno ++){
-			arrayCantidadPesoReno.push(pesoReno);
-		}
-	})
-	packOfGifts.forEach((regalo)=> {
-		let pesoPorRegalo = regalo.length;
-		for(let pesoTotal = 1; pesoTotal <= pesoPorRegalo; pesoTotal ++){
-			arrayCantidadPesoRegalos.push(pesoTotal)			
-		}
-	})
-	pesoQuePuedeLevantarElReno = arrayCantidadPesoReno.length;
-	pesoTotalDeLaCajaDeRegalos = arrayCantidadPesoRegalos.length;
-	cajasQuePuedeLlevarSantaClaus = parseInt(pesoQuePuedeLevantarElReno / pesoTotalDeLaCajaDeRegalos);
-	return cajasQuePuedeLlevarSantaClaus;
+  let pesoQuePuedeLevantarElReno;
+  let pesoTotalDeLaCajaDeRegalos;
+  let cajasQuePuedeLlevarSantaClaus;
+  let arrayCantidadPesoRegalos = [];
+  let arrayCantidadPesoReno = [];
+  reindeers.forEach((reno) => {
+    pesoQuePuedeLevantarElReno = reno.length * 2;
+    for (let pesoReno = 1; pesoReno <= pesoQuePuedeLevantarElReno; pesoReno++) {
+      arrayCantidadPesoReno.push(pesoReno);
+    }
+  })
+  packOfGifts.forEach((regalo) => {
+    let pesoPorRegalo = regalo.length;
+    for (let pesoTotal = 1; pesoTotal <= pesoPorRegalo; pesoTotal++) {
+      arrayCantidadPesoRegalos.push(pesoTotal)
+    }
+  })
+  pesoQuePuedeLevantarElReno = arrayCantidadPesoReno.length;
+  pesoTotalDeLaCajaDeRegalos = arrayCantidadPesoRegalos.length;
+  cajasQuePuedeLlevarSantaClaus = parseInt(pesoQuePuedeLevantarElReno / pesoTotalDeLaCajaDeRegalos);
+  return cajasQuePuedeLlevarSantaClaus;
 }
 const packOfGifts = ["book", "doll", "ball"]
 const reindeers = ["dasher", "dancer"]
@@ -127,8 +127,8 @@ console.log(firstRepeatedId)*/
 /*Codeforces Reto Watermelon 01*/
 
 const watermelonWeight = 90;
-function canBeEven() {        
-  if(watermelonWeight % 2 !== 0) {
+function canBeEven() {
+  if (watermelonWeight % 2 !== 0) {
     return "NO";
   } else return "YES";
 }
@@ -140,7 +140,7 @@ function canBeEven() {
 const word = "internationalization"
 
 function longWord() {
-  if(word.length > 10) {
+  if (word.length > 10) {
     let wordArr = word.split('');
     let firstLetter = wordArr[0]
     let lastPosition = wordArr.length - 1
@@ -202,7 +202,7 @@ function nextRound(players, minPoints) {
   }
   console.log(arrOfPlayer)
   arrOfPlayer.forEach((player) => {
-    if(player >= minPoints) {
+    if (player >= minPoints) {
       count++
     }
   })
@@ -217,7 +217,7 @@ function nextRound(players, minPoints) {
 
 
 function solveOperation(number, typeOperation) {
-  if(typeOperation === '--') {
+  if (typeOperation === '--') {
     number -= 1;
     return number;
   } else if (typeOperation === '++') {
@@ -234,7 +234,7 @@ console.log(solveOperation(inputNumber, typeOperation))
 //*TODO: Descomenta para ejecutar ⬆️
 
 
-/*Codeforces Reto Dominio piling*/
+/*Codeforces Reto Dominio piling 06*/
 
 
 function fitsIn(side1, side2) {
@@ -244,4 +244,48 @@ function fitsIn(side1, side2) {
   return countOfDominos;
 }
 
-console.log(fitsIn(3, 2));
+//console.log(fitsIn(3, 2));
+//*TODO: Descomenta para ejecutar ⬆️
+
+
+/*Codeforces Reto a beautifull matrix 07*/
+
+const matrix = [
+  [0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0],
+  [0, 1, 0, 0, 0],
+  [0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0]
+];
+
+let rowIndex = matrix.findIndex(row => row.includes(1));
+let columnIndex = matrix[rowIndex].findIndex(element => element === 1);
+let centerRowIndex = Math.floor(matrix.length / 2);
+let centerColumnIndex = Math.floor(matrix[0].length / 2);
+let count = 0;
+
+function beautifullMatrix() {
+  while (rowIndex !== centerRowIndex || columnIndex !== centerColumnIndex) {
+    if (rowIndex < centerRowIndex) {
+      rowIndex++;
+      count++;
+    } else if (rowIndex > centerRowIndex) {
+      rowIndex--;
+      count++;
+    }
+
+    if (columnIndex < centerColumnIndex) {
+      columnIndex++;
+      count++;
+    } else if (columnIndex > centerColumnIndex) {
+      columnIndex--;
+      count++;
+    }
+  }
+  return count
+}
+
+//console.log(beautifullMatrix());
+//*TODO: Descomenta para ejecutar ⬆️
+
+
