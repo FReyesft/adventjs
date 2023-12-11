@@ -293,20 +293,41 @@ function beautifullMatrix() {
 
 
 function compareString(str1, str2) {
-  let str1LowerCase = str1.toLowerCase(); 
+  let str1LowerCase = str1.toLowerCase();
   let str2LowerCase = str2.toLowerCase();
-  if(str1LowerCase === str2LowerCase) {
+  if (str1LowerCase === str2LowerCase) {
     return 0;
-  } else if(str1LowerCase < str2LowerCase) { //?No sabía que se podian comparar string de esta manera :O
+  } else if (str1LowerCase < str2LowerCase) { //?No sabía que se podian comparar string de esta manera :O
     return -1
-  } else if(str1LowerCase > str2LowerCase) { //?No sabía que se podian comparar string de esta manera :O
+  } else if (str1LowerCase > str2LowerCase) { //?No sabía que se podian comparar string de esta manera :O
     return 1
   }
 }
 
 
-const string1 = "aaaa"
-const string2 = "aaaA"
+const string1 = "aaaa";
+const string2 = "aaaA";
 
 //console.log(compareString(string1, string2))
+//*TODO: Descomenta para ejecutar ⬆️
+
+
+/*Codeforces Reto Helpful Maths 09*/
+
+function orderSum(string) {
+  let arrString = string.split('+');
+  let arrSorted = arrString.sort();
+  let arrWithSimbol = []
+  let lastIndex = arrSorted.length
+  for (let i = 0; i < arrSorted.length; i++) {
+    if(lastIndex != arrSorted[i]) {
+      arrWithSimbol.push(arrSorted[i] + '+')
+    }
+  }
+  let finalArr = arrWithSimbol.toString().replaceAll(',', '')
+  return finalArr + lastIndex
+}
+
+let string = "1+1+1+3+3";
+//console.log(orderSum(string));
 //*TODO: Descomenta para ejecutar ⬆️
