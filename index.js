@@ -289,3 +289,24 @@ function beautifullMatrix() {
 //*TODO: Descomenta para ejecutar ⬆️
 
 
+/*Codeforces Reto Petya and Strings 08*/
+
+
+function compareString(str1, str2) {
+  let str1LowerCase = str1.toLowerCase(); 
+  let str2LowerCase = str2.toLowerCase();
+  if(str1LowerCase === str2LowerCase) {
+    return 0;
+  } else if(str1LowerCase < str2LowerCase) { //?No sabía que se podian comparar string de esta manera :O
+    return -1
+  } else if(str1LowerCase > str2LowerCase) { //?No sabía que se podian comparar string de esta manera :O
+    return 1
+  }
+}
+
+
+const string1 = "aaaa"
+const string2 = "aaaA"
+
+//console.log(compareString(string1, string2))
+//*TODO: Descomenta para ejecutar ⬆️
