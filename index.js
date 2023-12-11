@@ -1,18 +1,5 @@
 //!Reto 1
 
-/*Este año los elfos han comprado una 
-máquina que envuelve regalos. Pero… ¡no 
-viene programada! Necesitamos crear un 
-algoritmo que le ayude en la tarea.
-A la máquina se le pasa un array con los 
-regalos. Cada regalo es un string. Necesitamos 
-que la máquina envuelva cada regalo en papel de regalo y lo coloque en un array de regalos envueltos.
-El papel de regalo es el símbolo * y 
-para envolver un regalo se coloca el símbolo 
-* de forma que rodee totalmente al string por 
-todos los lados. Por ejemplo:*/
-
-
 const gifts = ['cat', 'game', 'socks'];
 function wrapping(gifts) {
 	let giftsEnvolved = [];
@@ -167,4 +154,36 @@ function longWord() {
 }
 
 //console.log(longWord())
+//*TODO: Descomenta para ejecutar ⬆️
+
+/*Codeforces Reto Team*/
+
+function solveContest(n, problems) {
+  let output = 0;
+
+  for (let i = 0; i < n; i++) {
+    const sureCount = problems[i].reduce((acumulator, valor) => acumulator + valor, 0);
+    if (sureCount >= 2) {
+      output++;
+    }
+  }
+
+  return output;
+}
+const n1 = 3;
+const problems1 = [
+  [1, 1, 0],
+  [1, 1, 1],
+  [1, 0, 0],
+];
+
+console.log(solveContest(n1, problems1)); 
+
+const n2 = 2;
+const problems2 = [
+  [1, 0, 0],
+  [0, 1, 1],
+];
+
+//console.log(solveContest(n2, problems2)); 
 //*TODO: Descomenta para ejecutar ⬆️
