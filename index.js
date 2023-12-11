@@ -330,6 +330,17 @@ function orderSum(string) {
 }
 
 let string = "1+1+1+3+3";
-console.log(orderSum(string));
-
+//console.log(orderSum(string));
 //*TODO: Descomenta para ejecutar ⬆️
+
+/*Code forces Reto Word Capitalization 10*/
+
+function capitalizeFirstLetter(string) {
+  let stringCapitalized = string.charAt(0).toUpperCase() + string.slice(1, string.length);
+  return stringCapitalized;
+}
+
+let stringToCapitalize = "konjac"
+//console.log(capitalizeFirstLetter(stringToCapitalize))
+//*TODO: Descomenta para ejecutar ⬆️
+
